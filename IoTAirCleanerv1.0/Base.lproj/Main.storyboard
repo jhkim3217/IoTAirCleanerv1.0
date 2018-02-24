@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,91 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IoTAirCleanerv1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JkV-LJ-sBP">
+                                <rect key="frame" x="163" y="632" width="51" height="31"/>
+                                <connections>
+                                    <action selector="tapOnSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="p01-5M-xIN"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IoT Air Cleaner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZk-WA-CWf">
+                                <rect key="frame" x="106" y="20" width="162" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Fz4-UJ-ujj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4wb-7c-ftS">
+                                <rect key="frame" x="-28" y="82" width="430" height="280"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="d7a-sX-9o9"/>
+                                    <constraint firstAttribute="width" constant="430" id="tlw-DG-4zk"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X1f-Mr-56i">
+                                <rect key="frame" x="13" y="377" width="350" height="220"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="21Q-l7-Y2a"/>
+                                    <constraint firstAttribute="width" constant="350" id="C53-hY-4Wl"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OFF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXs-qc-3hf">
+                                <rect key="frame" x="227" y="637" width="32" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjX-WW-H8C">
+                                <rect key="frame" x="122" y="637" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JkV-LJ-sBP" firstAttribute="top" secondItem="X1f-Mr-56i" secondAttribute="bottom" constant="35" id="1nW-qn-DbU"/>
+                            <constraint firstItem="WZk-WA-CWf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3Jj-fG-MEt"/>
+                            <constraint firstItem="lXs-qc-3hf" firstAttribute="trailing" secondItem="WZk-WA-CWf" secondAttribute="trailing" constant="-9" id="82w-B6-8YI"/>
+                            <constraint firstItem="4wb-7c-ftS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OQx-7x-id4"/>
+                            <constraint firstItem="JkV-LJ-sBP" firstAttribute="centerY" secondItem="qjX-WW-H8C" secondAttribute="centerY" id="QpA-hf-ws2"/>
+                            <constraint firstItem="X1f-Mr-56i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WZM-ap-L5H"/>
+                            <constraint firstItem="JkV-LJ-sBP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="anY-g4-ghc"/>
+                            <constraint firstItem="4wb-7c-ftS" firstAttribute="top" secondItem="WZk-WA-CWf" secondAttribute="bottom" constant="10" id="ccn-6s-gTk"/>
+                            <constraint firstItem="WZk-WA-CWf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eqv-DG-V72"/>
+                            <constraint firstItem="JkV-LJ-sBP" firstAttribute="centerY" secondItem="lXs-qc-3hf" secondAttribute="centerY" id="i2U-98-El0"/>
+                            <constraint firstItem="lXs-qc-3hf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="j4T-n3-l47"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qjX-WW-H8C" secondAttribute="trailing" constant="20" symbolic="YES" id="odx-YI-qwh"/>
+                            <constraint firstItem="qjX-WW-H8C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="pfB-pI-xft"/>
+                            <constraint firstItem="X1f-Mr-56i" firstAttribute="top" secondItem="4wb-7c-ftS" secondAttribute="bottom" constant="15" id="sua-Cn-25q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="Dust" destination="X1f-Mr-56i" id="akU-NV-cj1"/>
+                        <outlet property="Tem_Hum" destination="4wb-7c-ftS" id="wsQ-nZ-2Cx"/>
+                        <outlet property="relayOnOff" destination="JkV-LJ-sBP" id="43w-ic-d4p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>

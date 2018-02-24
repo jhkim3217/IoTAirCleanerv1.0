@@ -12,6 +12,7 @@
 		05CF1313203D318500433EA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CF1311203D318500433EA4 /* Main.storyboard */; };
 		05CF1315203D318500433EA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CF1314203D318500433EA4 /* Assets.xcassets */; };
 		05CF1318203D318500433EA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CF1316203D318500433EA4 /* LaunchScreen.storyboard */; };
+		05CF1321203D342100433EA4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CF1320203D342100433EA4 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		05CF1314203D318500433EA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05CF1317203D318500433EA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05CF1319203D318500433EA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05CF1320203D342100433EA4 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05CF1321203D342100433EA4 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				05CF130C203D318500433EA4 /* IoTAirCleanerv1.0 */,
 				05CF130B203D318500433EA4 /* Products */,
+				05CF131F203D342000433EA4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				05CF1319203D318500433EA4 /* Info.plist */,
 			);
 			path = IoTAirCleanerv1.0;
+			sourceTree = "<group>";
+		};
+		05CF131F203D342000433EA4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05CF1320203D342100433EA4 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
